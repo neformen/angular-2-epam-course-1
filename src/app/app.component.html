@@ -1,3 +1,22 @@
 <h1>
   {{title}}
 </h1>
+
+<p>{{description}}</p>
+
+<p>Today: {{date | date}}</p>
+
+<ul>
+  <li *ngFor="let student of listOfStudents">{{student}}</li>
+</ul>
+
+<input type="button" value="click me" (click)="isVisible=!isVisible">
+
+<p *ngIf="isVisible">Hide area</p>
+
+<ul>
+  <li *ngFor="let company of companies">
+    {{company}}
+    <input type="button" (click)="deleteCompany(company)" value="delete">
+  </li>
+</ul>
